@@ -13,12 +13,22 @@ struct RosaView: View {
         ZStack {
             Color(cor)
                 .ignoresSafeArea()
-            ZStack {
-                Circle()
-                    .frame(width: 300, height: 300)
-                Image(systemName: "paintbrush")
-                    .foregroundColor(cor)
-                    .font(.system(size: 200))
+            VStack {
+                ZStack {
+                    ZStack {
+                        Circle()
+                            .frame(width: 300, height: 300)
+                        Image(systemName: "paintbrush")
+                            .foregroundColor(cor)
+                            .font(.system(size: 200))
+                    }
+                    VStack {
+                        Spacer()
+                        Color(.white)
+                            .ignoresSafeArea()
+                            .frame(height: 30)
+                    }
+                }
             }
         }
     }
