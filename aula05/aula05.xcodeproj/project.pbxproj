@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473A14AF2C7FEB7900313241 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 473A14AE2C7FEB7900313241 /* song.mp3 */; };
 		47DE99222C7E80060021A4CB /* aula05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE99212C7E80060021A4CB /* aula05App.swift */; };
 		47DE99242C7E80060021A4CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE99232C7E80060021A4CB /* ContentView.swift */; };
 		47DE99262C7E80070021A4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DE99252C7E80070021A4CB /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473A14AE2C7FEB7900313241 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../../Downloads/song.mp3; sourceTree = "<group>"; };
 		47DE991E2C7E80060021A4CB /* aula05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aula05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DE99212C7E80060021A4CB /* aula05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aula05App.swift; sourceTree = "<group>"; };
 		47DE99232C7E80060021A4CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473A14AD2C7FE94F00313241 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				47DE99282C7E80070021A4CB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		47DE99152C7E80060021A4CB = {
 			isa = PBXGroup;
 			children = (
@@ -58,19 +68,12 @@
 				47DE99212C7E80060021A4CB /* aula05App.swift */,
 				47DE99232C7E80060021A4CB /* ContentView.swift */,
 				47DE99312C7E85E00021A4CB /* DetailsView.swift */,
+				473A14AE2C7FEB7900313241 /* song.mp3 */,
 				47DE99332C7E85F60021A4CB /* SongView.swift */,
 				47DE99252C7E80070021A4CB /* Assets.xcassets */,
-				47DE99272C7E80070021A4CB /* Preview Content */,
+				473A14AD2C7FE94F00313241 /* Preview Content */,
 			);
 			path = aula05;
-			sourceTree = "<group>";
-		};
-		47DE99272C7E80070021A4CB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				47DE99282C7E80070021A4CB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +136,7 @@
 			files = (
 				47DE99292C7E80070021A4CB /* Preview Assets.xcassets in Resources */,
 				47DE99262C7E80070021A4CB /* Assets.xcassets in Resources */,
+				473A14AF2C7FEB7900313241 /* song.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

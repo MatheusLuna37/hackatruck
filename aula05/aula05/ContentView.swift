@@ -68,19 +68,19 @@ struct ContentView: View {
                         }
                         .padding([.horizontal])
                         .padding([.bottom])
-                        ForEach (0..<arrayMusicas.count) { i in
-                            NavigationLink(destination: SongView(index: i)) {
+                        ForEach (arrayMusicas) { musica in
+                            NavigationLink(destination: SongView(song: musica, array: arrayMusicas)) {
                                 HStack {
-                                    AsyncImage(url: URL(string: arrayMusicas[i].cover)) { image in
+                                    AsyncImage(url: URL(string: musica.cover)) { image in
                                         image.resizable()
                                             .frame(width: 60, height: 60)
                                     } placeholder: {
                                     }
                                     VStack (alignment: .leading){
-                                        Text(arrayMusicas[i].name)
+                                        Text(musica.name)
                                             .foregroundStyle(.white)
                                             .fontWeight(.bold)
-                                        Text(arrayMusicas[i].artist)
+                                        Text(musica.artist)
                                             .foregroundStyle(.white)
                                     }
                                     Spacer()
@@ -98,15 +98,15 @@ struct ContentView: View {
                                 .fontWeight(.bold)
                             ScrollView(.horizontal) {
                                 HStack {
-                                    ForEach (0..<recomendadas.count) { i in
-                                        NavigationLink(destination: SongView(index: i)) {
+                                    ForEach (recomendadas) { musica in
+                                        NavigationLink(destination: SongView(song: musica, array: recomendadas)) {
                                             VStack {
-                                                AsyncImage(url: URL(string: recomendadas[i].cover)) { image in
+                                                AsyncImage(url: URL(string: musica.cover)) { image in
                                                     image.resizable()
                                                         .frame(width: 200, height: 200)
                                                 } placeholder: {
                                                 }
-                                                Text(recomendadas[i].name)
+                                                Text(musica.name)
                                                     .foregroundStyle(.white)
                                             }
                                         }
