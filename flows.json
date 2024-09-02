@@ -1,0 +1,374 @@
+[
+    {
+        "id": "85a25a2490c2b2fe",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c482796c63d47e56",
+        "type": "http in",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "url": "/nome",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "a315f82279b9bd2a"
+            ]
+        ]
+    },
+    {
+        "id": "f16b840367a55303",
+        "type": "http response",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a315f82279b9bd2a",
+        "type": "cloudantplus in",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "cloudant": "3ad059b44736f931",
+        "database": "matheusbl",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "f16b840367a55303",
+                "ee29440b7a4cd233"
+            ]
+        ]
+    },
+    {
+        "id": "7869791041cd24c9",
+        "type": "http in",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "url": "/salvar-nome",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "03d3eef2a4d3055e"
+            ]
+        ]
+    },
+    {
+        "id": "a9573bc06213702a",
+        "type": "cloudantplus out",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "cloudant": "3ad059b44736f931",
+        "database": "matheusbl",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "69968bbebc34b516",
+                "39b6714124a5d4e9"
+            ]
+        ]
+    },
+    {
+        "id": "ee29440b7a4cd233",
+        "type": "debug",
+        "z": "85a25a2490c2b2fe",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "69968bbebc34b516",
+        "type": "debug",
+        "z": "85a25a2490c2b2fe",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "39b6714124a5d4e9",
+        "type": "http response",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bcbae115e46923e7",
+        "type": "http in",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "url": "/editar",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "4d5373dd2ddd2bc1"
+            ]
+        ]
+    },
+    {
+        "id": "4d5373dd2ddd2bc1",
+        "type": "cloudantplus out",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "cloudant": "3ad059b44736f931",
+        "database": "matheusbl",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "b04486f0fd6368c6",
+                "50a625222b1a69cd"
+            ]
+        ]
+    },
+    {
+        "id": "b04486f0fd6368c6",
+        "type": "http response",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "50a625222b1a69cd",
+        "type": "debug",
+        "z": "85a25a2490c2b2fe",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "daba7fc8736201b6",
+        "type": "http in",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "url": "/deletar",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 540,
+        "wires": [
+            [
+                "10f12c98c456c27d"
+            ]
+        ]
+    },
+    {
+        "id": "e24bdc5d31855720",
+        "type": "http response",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "64793d41fb7fbfde",
+        "type": "debug",
+        "z": "85a25a2490c2b2fe",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "63301bf7c46a2580",
+        "type": "cloudantplus out",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "cloudant": "3ad059b44736f931",
+        "database": "matheusbl",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "e24bdc5d31855720",
+                "64793d41fb7fbfde"
+            ]
+        ]
+    },
+    {
+        "id": "4773bd0340289482",
+        "type": "split",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": "1",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "a9573bc06213702a"
+            ]
+        ]
+    },
+    {
+        "id": "940c1bd189622cd4",
+        "type": "split",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "63301bf7c46a2580"
+            ]
+        ]
+    },
+    {
+        "id": "03d3eef2a4d3055e",
+        "type": "switch",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "array",
+                "vt": "array"
+            },
+            {
+                "t": "istype",
+                "v": "object",
+                "vt": "object"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "4773bd0340289482"
+            ],
+            [
+                "a9573bc06213702a"
+            ]
+        ]
+    },
+    {
+        "id": "10f12c98c456c27d",
+        "type": "switch",
+        "z": "85a25a2490c2b2fe",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "array",
+                "vt": "array"
+            },
+            {
+                "t": "istype",
+                "v": "object",
+                "vt": "object"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 540,
+        "wires": [
+            [
+                "940c1bd189622cd4"
+            ],
+            [
+                "63301bf7c46a2580"
+            ]
+        ]
+    },
+    {
+        "id": "3ad059b44736f931",
+        "type": "cloudantplus",
+        "host": "https://8685b21f-dcdc-4864-a9bc-84e5121ccc12-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "",
+        "useapikey": true
+    }
+]
